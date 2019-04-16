@@ -1,55 +1,10 @@
 <template>
   <div class="category-box">
-    <!-- banner图 -->
-    <Banner :banners="bannerList"></Banner>
-    <!-- 优选严选 -->
-    <div class="recommend-title">
-      <div class="recommend-text">
-        <img src="../images/home/03-yxyx.png" alt>
-        <em>优鲜严选</em>
-      </div>
-      <div class="recommend-text">
-        <img src="../images/home/04-axjc.png" alt>
-        <em>安心检测</em>
-      </div>
-      <div class="recommend-text">
-        <img src="../images/home/05-pfbz.png" alt>
-        <em>赔付保障</em>
-      </div>
-    </div>
-    <!-- 本周新品 -->
-    <div class="category-wrap">
-      <div class="lantern-wrap">
-        <div class="lantern-item">
-          <img src="../images/home/06-bzxp.png" alt>
-          <p>本周新品</p>
-        </div>
-        <div class="lantern-item">
-          <img src="../images/home/07-yqyl.png" alt>
-          <p>邀请有礼</p>
-        </div>
-        <div class="lantern-item">
-          <img src="../images/home/08-meqd.png" alt>
-          <p>每日签到</p>
-        </div>
-        <div class="lantern-item">
-          <img src="../images/home/09-cdzq.png" alt>
-          <p>凑单专区</p>
-        </div>
-        <div class="lantern-item">
-          <img src="../images/home/10-kthy.png" alt>
-          <p>开通会员</p>
-        </div>
-      </div>
-      <div class="card-wrap">
-        <img src="../images/home/12-xrtq.png" alt>
-        <img src="../images/home/13-mrjg.png" alt>
-      </div>
-    </div>
+
     <!-- 商品列表 -->
     <div class="all-products">
       <div class="product-list-divider">
-        <img src="../images/home/11-banner.jpg" alt>
+        <img src="https://j-image.missfresh.cn/mis_img_20190415015906835.png?mryxw=750&mryxh=180" alt>
       </div>
       <div class="product-list">
         <div class="product-item">
@@ -146,71 +101,10 @@ export default {
 </script>
 
 <style lang="less">
-@import "../styles/common/reset.less";
-
 .category-box {
   margin-top: 43px;
   overflow: auto;
 
-  .recommend-title {
-    width: 100%;
-    height: 49px;
-    line-height: 49px;
-    display: flex;
-    justify-content: space-around;
-    .recommend-text {
-      flex: 1;
-      text-align: center;
-      color: #4d4d4d;
-      font-size: 12px;
-      img {
-        vertical-align: sub;
-        width: 16px;
-        height: 16px;
-        margin-right: 4px;
-      }
-    }
-  }
-  .category-wrap {
-    width: 100%;
-    height: 226.58px;
-    .lantern-wrap {
-      width: 100%;
-      height: 109px;
-      display: flex;
-      justify-content: space-around;
-      .lantern-item {
-        padding-top: 24px;
-        img {
-          display: block;
-          width: 40px;
-          padding-bottom: 6px;
-          margin: auto;
-        }
-        p {
-          color: #474245;
-        }
-      }
-    }
-    .card-wrap {
-      width: 100%;
-      height: 100px;
-      box-sizing: border-box;
-      padding: 0 15px;
-      overflow: hidden;
-      img {
-        display: block;
-        width: 170px;
-        height: 100px;
-      }
-      img:first-child {
-        float: left;
-      }
-      img:last-child {
-        float: right;
-      }
-    }
-  }
   .all-products {
     .product-list-divider {
       width: 100%;

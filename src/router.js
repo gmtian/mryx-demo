@@ -10,13 +10,14 @@ export default new VueRouter({
       component: () => import('./views/Home.vue'),
       children: [
         { path: 'selling', component: () => import('./components/Selling.vue') },
-        { path: 'member specials', component: () => import('./components/MemberSpecials.vue') }
+        { path: 'specials', component: () => import('./components/Specials.vue') },
+        { path: '', redirect: '/home/selling' }
       ]
     },
     { path: '/center', component: () => import('./views/Center.vue') },
     { path: '/sort', component: () => import('./views/Sort.vue') },
     { path: '/cart', component: () => import('./views/Cart.vue') },
     { path: '/city', component: () => import('./views/City.vue') },
-    { path: '*', redirect: '/home' }
+    // { path: '*', redirect: '/home' }
   ]
 })

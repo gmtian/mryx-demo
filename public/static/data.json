@@ -23,7 +23,8 @@
       "name": "热卖",
       "icon": "https://j-image.missfresh.cn/mis_img_20181212225039946.png?mryxw=120&mryxh=120",
       "category_type": "首页频道",
-      "group_bottom_img": ""
+      "group_bottom_img": "",
+      "href": "/home/selling"
     },
     {
       "category_image": "",
@@ -36,7 +37,8 @@
       "name": "‍会员特价",
       "icon": "https://j-image.missfresh.cn/mis_img_20190218143311278.png?mryxw=1059&mryxh=1058",
       "category_type": null,
-      "group_bottom_img": ""
+      "group_bottom_img": "",
+      "href": "/home/specials"
     },
     {
       "category_image": "",
@@ -49,7 +51,8 @@
       "name": "0.99元菜市场",
       "icon": "https://j-image.missfresh.cn/mis_img_20190104093258105.png?mryxw=140&mryxh=140",
       "category_type": null,
-      "group_bottom_img": ""
+      "group_bottom_img": "",
+      "href": "/home"
     },
     {
       "category_image": "",
@@ -62,7 +65,8 @@
       "name": "新鲜水果",
       "icon": "https://j-image.missfresh.cn/mis_img_20190415010710117.png?mryxw=96&mryxh=96",
       "category_type": null,
-      "group_bottom_img": ""
+      "group_bottom_img": "",
+      "href": "/home"
     },
     {
       "category_image": "",
@@ -75,7 +79,8 @@
       "name": "时令蔬菜",
       "icon": "https://j-image.missfresh.cn/mis_img_20190411215607573.png?mryxw=96&mryxh=96",
       "category_type": null,
-      "group_bottom_img": ""
+      "group_bottom_img": "",
+      "href": "/home"
     },
     {
       "category_image": "",
@@ -88,7 +93,8 @@
       "name": "精品肉蛋",
       "icon": "https://j-image.missfresh.cn/mis_img_20190411233944397.png?mryxw=96&mryxh=96",
       "category_type": null,
-      "group_bottom_img": ""
+      "group_bottom_img": "",
+      "href": "/home"
     },
     {
       "category_image": "",
@@ -101,7 +107,8 @@
       "name": "海鲜水产",
       "icon": "https://j-image.missfresh.cn/mis_img_20190411215703249.png?mryxw=96&mryxh=96",
       "category_type": null,
-      "group_bottom_img": ""
+      "group_bottom_img": "",
+      "href": "/home"
     },
     {
       "category_image": "",
@@ -114,7 +121,8 @@
       "name": "大牌乳品",
       "icon": "https://j-image.missfresh.cn/mis_img_20190411215729751.png?mryxw=96&mryxh=96",
       "category_type": null,
-      "group_bottom_img": ""
+      "group_bottom_img": "",
+      "href": "/home"
     },
     {
       "category_image": "",
@@ -127,7 +135,8 @@
       "name": "网红零食",
       "icon": "https://j-image.missfresh.cn/mis_img_20181212225358505.png?mryxw=140&mryxh=140",
       "category_type": null,
-      "group_bottom_img": ""
+      "group_bottom_img": "",
+      "href": "/home"
     },
     {
       "category_image": "",
@@ -140,7 +149,8 @@
       "name": "酒水饮料",
       "icon": "https://j-image.missfresh.cn/mis_img_20181212225617637.png?mryxw=140&mryxh=140",
       "category_type": null,
-      "group_bottom_img": ""
+      "group_bottom_img": "",
+      "href": "/home"
     },
     {
       "category_image": "",
@@ -153,7 +163,8 @@
       "name": "烘焙糕点",
       "icon": "https://j-image.missfresh.cn/mis_img_20181212225750228.png?mryxw=140&mryxh=140",
       "category_type": null,
-      "group_bottom_img": ""
+      "group_bottom_img": "",
+      "href": "/home"
     },
     {
       "category_image": "",
@@ -166,7 +177,8 @@
       "name": "方便速食",
       "icon": "https://j-image.missfresh.cn/mis_img_20190329213300525.png?mryxw=144&mryxh=144",
       "category_type": null,
-      "group_bottom_img": ""
+      "group_bottom_img": "",
+      "href": "/home"
     },
     {
       "category_image": "",
@@ -179,7 +191,8 @@
       "name": "卤味熟食",
       "icon": "https://j-image.missfresh.cn/mis_img_20181212225647021.png?mryxw=140&mryxh=140",
       "category_type": null,
-      "group_bottom_img": ""
+      "group_bottom_img": "",
+      "href": "/home"
     },
     {
       "category_image": "",
@@ -192,7 +205,8 @@
       "name": "粮油调味",
       "icon": "https://j-image.missfresh.cn/mis_img_20190329212200665.png?mryxw=144&mryxh=144",
       "category_type": null,
-      "group_bottom_img": ""
+      "group_bottom_img": "",
+      "href": "/home"
     },
     {
       "category_image": "",
@@ -205,7 +219,8 @@
       "name": "美妆百货",
       "icon": "https://j-image.missfresh.cn/mis_img_20190329212257188.png?mryxw=144&mryxh=144",
       "category_type": null,
-      "group_bottom_img": ""
+      "group_bottom_img": "",
+      "href": "/home"
     },
     {
       "category_image": "",
@@ -218,7 +233,8 @@
       "name": "囤货专区",
       "icon": "https://j-image.missfresh.cn/mis_img_20190306172132766.png?mryxw=144&mryxh=144",
       "category_type": null,
-      "group_bottom_img": ""
+      "group_bottom_img": "",
+      "href": "/home"
     }
   ],
   "wx_app_new_img": "",
