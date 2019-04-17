@@ -67,37 +67,7 @@
 </template>
 
 <script>
-import Banner from '../components/Banner'
-import axios from 'axios'
-
-export default {
-  data () {
-    return {
-      bannerList: []
-    }
-  },
-
-  components: {
-    Banner
-  },
-
-  methods: {
-    getBannerList () {
-      axios.get('/static/data.json').then(res => {
-        let data = res.data
-        if (data.code === 0) {
-          this.bannerList = data.product_list.banner
-        } else {
-          alert(data.station_code)
-        }
-      })
-    }
-  },
-
-  created () {
-    this.getBannerList()
-  }
-}
+export default {}
 </script>
 
 <style lang="less">

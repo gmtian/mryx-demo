@@ -1,10 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import Vant from 'vant'
-import 'vant/lib/index.css'
+import { Tabbar, TabbarItem, Stepper } from 'vant'
 
-Vue.use(Vant)
+Vue.use(Tabbar).use(TabbarItem).use(Stepper)
 
 Vue.config.productionTip = false
 

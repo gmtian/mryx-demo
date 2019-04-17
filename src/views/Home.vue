@@ -14,14 +14,7 @@
             v-for="category in categoryList"
             :key="category.internal_id"
           >{{ category.name }}</router-link>
-          <!-- <router-link
-            tag="span"
-            to="/home/selling"
-            active-class="category-nav-item-active">热卖</router-link>
-          <router-link
-            tag="span"
-            to="/home/specials"
-            active-class="category-nav-item-active">会员特价</router-link> -->
+
         </div>
         <div class="category-nav-btn"></div>
       </div>
@@ -50,12 +43,9 @@ export default {
   methods: {
     getCategoryList () {
       axios.get('/static/data.json').then(res => {
-
         let data = res.data
-        console.log(data)
         if (data.code === 0) {
-          this.categoryList = data.category_list;
-          console.log(this.categoryList);
+          this.categoryList = data.category_list
         } else {
           alert(data.station_code)
         }

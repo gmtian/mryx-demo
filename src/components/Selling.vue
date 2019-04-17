@@ -4,109 +4,65 @@
     <Banner :banners="bannerList"></Banner>
     <!-- 优选严选 -->
     <div class="recommend-title">
-      <div class="recommend-text">
-        <img src="../images/home/03-yxyx.png" alt>
-        <em>优鲜严选</em>
+      <div class="recommend-text" v-for="(item,index) in recommendList" :key="index">
+        <img :src="item.image" alt>
+        <em>{{ item.name }}</em>
       </div>
-      <div class="recommend-text">
+      <!-- <div class="recommend-text">
         <img src="../images/home/04-axjc.png" alt>
         <em>安心检测</em>
       </div>
       <div class="recommend-text">
         <img src="../images/home/05-pfbz.png" alt>
         <em>赔付保障</em>
-      </div>
+      </div>-->
     </div>
     <!-- 本周新品 -->
     <div class="category-wrap">
       <div class="lantern-wrap">
-        <div class="lantern-item">
-          <img src="../images/home/06-bzxp.png" alt>
-          <p>本周新品</p>
-        </div>
-        <div class="lantern-item">
-          <img src="../images/home/07-yqyl.png" alt>
-          <p>邀请有礼</p>
-        </div>
-        <div class="lantern-item">
-          <img src="../images/home/08-meqd.png" alt>
-          <p>每日签到</p>
-        </div>
-        <div class="lantern-item">
-          <img src="../images/home/09-cdzq.png" alt>
-          <p>凑单专区</p>
-        </div>
-        <div class="lantern-item">
-          <img src="../images/home/10-kthy.png" alt>
-          <p>开通会员</p>
+        <div class="lantern-item" v-for="(item,index) in categoryList" :key="index">
+          <img :src="item.image" alt>
+          <p>{{ item.name }}</p>
         </div>
       </div>
       <div class="card-wrap">
-        <img src="../images/home/12-xrtq.png" alt>
-        <img src="../images/home/13-mrjg.png" alt>
+        <img v-for="(item,index) in cardList" :key="index" :src="item.image" alt>
       </div>
     </div>
     <!-- 商品列表 -->
     <div class="all-products">
-      <div class="product-list-divider">
-        <img src="../images/home/11-banner.jpg" alt>
+      <div class="product-list-divider"
+      v-for="(item, index) in dividerBanner"
+      :key="index">
+        <img :src="item.path" alt>
       </div>
       <div class="product-list">
-        <div class="product-item">
-          <img src="../images/home/14-xjpg.jpg" alt>
+        <div class="product-item" v-for="(item, index) in productList" :key="index">
+          <router-link :to="{ name: 'detail',params: {id: item.stock }}">
+            <img :src="item.image" alt>
+          </router-link>
           <div class="item-detail">
-            <div class="item-title">
-              <p class="sub-title">1个新疆阿克苏苹果大果190g起</p>
-              <p class="mess-title">蜜汁甜 再一次回味初恋</p>
-            </div>
-            <div class="item-tag">
-              <span>新人专享</span>
-            </div>
-            <div class="item-price">
-              <span class="price">￥ 1.9</span>
-            </div>
+            <router-link :to="{ name: 'detail',params: {id: item.stock }}" class="item-title">
+              <p class="sub-title">{{ item.name }}</p>
+              <p class="mess-title">{{ item.subtitle }}</p>
+            </router-link>
+            <router-link :to="{ name: 'detail',params: {id: item.stock }}" class="item-tag">
+              <span>{{ item.product_tags }}</span>
+            </router-link>
+            <router-link :to="{ name: 'detail',params: {id: item.stock }}" class="item-price">
+              <span class="price">￥ {{ item.vip_price_pro.price_down.price / 100 }}</span>
+            </router-link>
             <div class="item-cart">
-              <img src="../images/home/17-listCart.png" alt>
-            </div>
-          </div>
-        </div>
-        <div class="product-item">
-          <img src="../images/home/15-cjs.jpg" alt>
-          <div class="item-detail">
-            <div class="item-title">
-              <p class="sub-title">新人-葱姜蒜组合包</p>
-              <p class="mess-title">“用心”给你每一道菜加点料</p>
-            </div>
-            <div class="item-tag">
-              <span>新人专享</span>
-            </div>
-            <div class="item-price">
-              <span class="price">￥ 1.9</span>
-            </div>
-            <div class="item-cart">
-              <img src="../images/home/17-listCart.png" alt>
-            </div>
-          </div>
-        </div>
-        <div class="product-item">
-          <img src="../images/home/16-btc.jpg" alt>
-          <div class="item-detail">
-            <div class="item-title">
-              <p class="sub-title">4个湖南冰糖橙440g起</p>
-              <p class="mess-title">酸酸甜甜的湖南妹陀</p>
-            </div>
-            <div class="item-tag">
-              <span>新人专享</span>
-            </div>
-            <div class="item-price">
-              <span class="price">￥ 1.9</span>
-            </div>
-            <div class="item-cart">
-              <img src="../images/home/17-listCart.png" alt>
+              <img :src="item.cart_image" v-if="item.flag" @click="fn1(item)" alt>
+              <van-stepper v-model="item.num" @overlimit="fn2(item, index)" v-else />
             </div>
           </div>
         </div>
       </div>
+
+      <div class="load-more" @click="loadMroe" v-if="pageNum < totalPage">点击加载更多...</div>
+      <div class="load-more" v-else>已全部加载完毕</div>
+
     </div>
   </div>
 </template>
@@ -118,7 +74,16 @@ import axios from 'axios'
 export default {
   data () {
     return {
-      bannerList: []
+      bannerList: [],
+      recommendList: [],
+      categoryList: [],
+      cardList: [],
+      productList: [],
+      dividerBanner: [],
+      seen: false,
+      pageNum: 1,
+      pageSize: 2,
+      total: 10
     }
   },
 
@@ -126,21 +91,56 @@ export default {
     Banner
   },
 
+  computed: {
+    totalPage () {
+      return Math.ceil(this.total / this.pageSize)
+    }
+  },
+
   methods: {
-    getBannerList () {
-      axios.get('/static/data.json').then(res => {
+    getList () {
+      axios.get('/static/data.json', {
+        params: {
+          pageNum: this.pageNum,
+          pageSize: this.pageSize
+        }
+      }).then(res => {
         let data = res.data
         if (data.code === 0) {
+          this.total = data.total
           this.bannerList = data.product_list.banner
+          this.recommendList = data.product_list.brands
+          this.categoryList = data.product_list.categoryAreaV2.lanternArea
+          this.cardList = data.product_list.categoryAreaV2.tileArea
+          // this.productList = this.productList.concat(data.product_list.products)
+          this.productList = data.product_list.products.map(item => {
+            return Object.assign({}, item, {flag: true, num: 1})
+          })
+          this.dividerBanner = data.product_list.divider_banner
+
         } else {
           alert(data.station_code)
         }
       })
+    },
+
+    loadMroe () {
+      this.pageNum++
+      this.getList()
+    },
+
+    fn1 (item) {
+      item.flag = false
+    },
+
+    fn2 (item, index) {
+      // this.$set(this.productList, index, Object.assign({}, item, { flag: true }));
+      item.flag = true
     }
   },
 
   created () {
-    this.getBannerList()
+    this.getList()
   }
 }
 </script>
@@ -292,6 +292,12 @@ export default {
           }
         }
       }
+    }
+    .load-more{
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+      color: #969696;
     }
   }
 }
