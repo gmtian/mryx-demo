@@ -4,7 +4,7 @@
 
     <div id="body">
       <!-- 导航栏 -->
-      <div class="category-nav-wrap">
+      <div class="category-nav-wrap" :class="{fixed: isFixedTab}">
         <div class="category-nav">
           <router-link
             tag="span"
@@ -32,7 +32,8 @@ import axios from 'axios'
 export default {
   data () {
     return {
-      categoryList: []
+      categoryList: [],
+      isFixedTab: false
     }
   },
 
@@ -50,11 +51,28 @@ export default {
           alert(data.station_code)
         }
       })
+    },
+
+    onScroll () {
+      let scrollTop = document.documentElement.scrollTop
+      if(scrollTop >= 40){
+        this.isFixedTab = true
+      }else{
+        this.isFixedTab = false
+      }
     }
   },
 
   created () {
     this.getCategoryList()
+  },
+
+  activated () {
+    window.addEventListener('scroll', this.onScroll)
+  },
+
+  deactivated () {
+    window.removeEventListener('scroll', this.onScroll)
   }
 }
 </script>
@@ -69,12 +87,18 @@ export default {
   margin-top: 40px;
   margin-bottom: 50px;
   .category-nav-wrap {
-    position: fixed;
-    top: 40px;
+    position: absolute;
     width: 100%;
     height: 43px;
     border-bottom: 1px solid #e6e6e6;
     overflow: hidden;
+
+    &.fixed {
+      position: fixed;
+      top: 40px;
+      z-index: 9;
+    }
+
     .category-nav {
       width: 89%;
       height: 100%;
