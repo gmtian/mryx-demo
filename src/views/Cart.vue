@@ -3,7 +3,7 @@
     <van-card
       :price="price"
       :title="tilte"
-      thumb="https://image.missfresh.cn/117257e280dc48cf8550f51cc5992fa2.jpeg?iopcmd=convert&dst=webp"
+      :thumb="imageURL"
       :origin-price="originprice"
     >
       <div slot="footer">
@@ -26,7 +26,8 @@ export default {
       num: 2,
       totalPrice: 0,
       checked: true,
-      tilte: "dsc"
+      tilte: "思念上海大馅馄饨150g",
+      imageURL: "https://image.missfresh.cn/117257e280dc48cf8550f51cc5992fa2.jpeg?iopcmd=convert&dst=webp"
     };
   },
 

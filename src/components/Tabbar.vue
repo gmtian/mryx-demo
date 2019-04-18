@@ -3,9 +3,9 @@
   v-model="active"
   active-color="#ff4891">
     <van-tabbar-item icon="home-o" to='/home' >首页</van-tabbar-item>
-    <van-tabbar-item icon="apps-o" to='/sort' >分类</van-tabbar-item>
+    <van-tabbar-item icon="apps-o" to='/category' >分类</van-tabbar-item>
     <van-tabbar-item icon="shopping-cart-o" to='/cart' >购物车</van-tabbar-item>
-    <van-tabbar-item icon="user-o" to='/center' >我的</van-tabbar-item>
+    <van-tabbar-item icon="user-o" to='/user' >我的</van-tabbar-item>
   </van-tabbar>
 </template>
 

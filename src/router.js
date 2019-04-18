@@ -18,8 +18,8 @@ export default new VueRouter({
             { path: '', redirect: '/selling' }
           ]
         },
-        { path: 'center', component: () => import('./views/Center.vue') },
-        { path: 'sort', component: () => import('./views/Sort.vue') },
+        { path: 'user', component: () => import('./views/User.vue') },
+        { path: 'category', component: () => import('./views/Category.vue') },
         { path: 'cart', component: () => import('./views/Cart.vue') },
         { path: '', redirect: '/home/selling' }
       ]

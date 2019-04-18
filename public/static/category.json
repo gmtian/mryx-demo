@@ -1,0 +1,43 @@
+{
+  "recommendList": [
+    {"id": "1", "name": "新鲜水果"},
+    {"id": "2", "name": "精品肉蛋"},
+    {"id": "3", "name": "海鲜水产"},
+    {"id": "4", "name": "大牌乳品"},
+    {"id": "5", "name": "网红零食"},
+    {"id": "6", "name": "酒水饮料"},
+    {"id": "7", "name": "烘焙糕点"},
+    {"id": "9", "name": "方便速食"},
+    {"id": "10", "name": "卤味熟食"},
+    {"id": "11", "name": "粮油调味"},
+    {"id": "12", "name": "美妆百货"}
+  ],
+  "navList": [
+    {"id": "1", "name": "本周上新"},
+    {"id": "2", "name": "葡萄浆果"},
+    {"id": "3", "name": "热带水果"},
+    {"id": "4", "name": "柑桔橙柚"},
+    {"id": "5", "name": "瓜类"},
+    {"id": "6", "name": "苹果梨"},
+    {"id": "7", "name": "桃李杏枣"}
+  ],
+  "commodity":[
+    {"id":"1","tag":"限时秒杀", "price":"5.9","desc":"酸酸甜甜的湖南妹陀","title":"湖南冰糖橙4个440g起",
+      "thumb":"https://fms-image.missfresh.cn/b0084f8c9a2a4b15a4ae87aeb71c2abc.jpg?iopcmd=convert&dst=webp",
+      "origin":"10.00"},
+    {"id":"2","tag":"第二件1元", "price":"9.9","desc":"热带长大 芝麻籽都带着甜","title":"越南白肉火龙果1个430g起",
+      "thumb":"https://image.missfresh.cn/9d70cb812b8f40dd99091e9a2f02bb99.jpg?iopcmd=convert&dst=webp"},
+    {"id":"3","tag":"限时秒杀", "price":"109","desc":"泰国初季榴莲来袭","title":"托曼尼榴莲1个3斤起",
+      "thumb":"https://image.missfresh.cn/db08a284325a4302b9c73146dc491fb2.jpg?iopcmd=convert&dst=webp",
+      "origin":"159"},
+    {"id":"4", "price":"9.9","desc":"因果肉饱满被叫做东方黑珍珠","title":"夏黑葡萄1盒500g",
+      "thumb":"https://fms-image.missfresh.cn/ed78dbbfe95245a7abfbba805165f01e.jpg?iopcmd=convert&dst=webp",
+      "origin":"19.9"},
+    {"id":"5", "tag":"限时秒杀","price":"16.9","desc":"大颗香甜 微微一笑为红颜","title":"红颜草莓1盒250g",
+      "thumb":"https://image.missfresh.cn/0be05adbf6fe49939f4ae87ccc833a55.gif?iopcmd=convert&dst=webp",
+      "origin":"21.9"},
+    {"id":"6", "tag":"限时特惠","price":"43.9","desc":"肉嘟嘟的女孩一样清甜","title":"小果 美早樱桃1盒250g",
+      "thumb":"https://image.missfresh.cn/2be6fedbb4c64293ad71ab75062b3035.jpg?iopcmd=convert&dst=webp",
+      "origin":"59.9"}
+  ]
+}
