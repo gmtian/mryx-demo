@@ -13,7 +13,13 @@
 export default {
   data () {
     return {
-      active: 0
+      // active: 0
+    }
+  },
+
+  computed: {
+    active () {
+      return this.$route.meta.tabNumber
     }
   }
 }
