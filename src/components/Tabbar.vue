@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       active: this.$route.meta.tabNumber
     }
