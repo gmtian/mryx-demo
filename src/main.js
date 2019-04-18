@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import { Tabbar, TabbarItem, Stepper } from 'vant'
+import { Tabbar, TabbarItem, Stepper, SubmitBar, Checkbox, CheckboxGroup, Card  } from 'vant'
 
-Vue.use(Tabbar).use(TabbarItem).use(Stepper)
+Vue.use(Tabbar).use(TabbarItem).use(Stepper).use(SubmitBar).use(Checkbox).use(CheckboxGroup).use(Card)
 
 Vue.config.productionTip = false
 

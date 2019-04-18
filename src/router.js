@@ -25,6 +25,7 @@ export default new VueRouter({
       ]
     },
     { path: '/city', component: () => import('./views/City.vue') },
+    { path: '/login', component: () => import('./views/Login.vue') },
     { path: '/home/:id', name: 'detail', component: () => import('./views/Detail.vue') },
     { path: '*', redirect: '/home/selling' }
   ]

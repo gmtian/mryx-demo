@@ -100,7 +100,7 @@ export default {
     }
 
     .category-nav {
-      width: 89%;
+      width: 90%;
       height: 100%;
       line-height: 43px;
       display: flex;
