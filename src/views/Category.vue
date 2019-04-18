@@ -24,10 +24,10 @@
           :origin-price="item.origin"
         >
           <div slot="footer" >
-            <van-button size="mini" v-if="item.flag" @click="fn1(item)">
+            <van-button size="mini" v-if="item.flag" @click="fn1(item)" @minus="jian(item)">
               <img src="//static-as.missfresh.cn/frontend/item/static/img/new-cart.a16f026.png" >
             </van-button>
-            <van-stepper v-model="item.num" @overlimit="fn2(item)" v-else/>
+            <van-stepper v-model="item.num" @overlimit="fn2(item)" @plus="add(item)" v-else/>
           </div>
         </van-card>
       </div>
@@ -47,6 +47,7 @@ export default {
       navList: [],
       commodity: [],
       tianjia: '1'
+                   // 购物车数据
     }
   },
   created () {
@@ -70,6 +71,18 @@ export default {
     },
     fn2 (item) {
       item.flag = true
+    },
+    /**
+     * 增加到购物车
+     */
+    add() {
+
+    },
+    /**
+     * 从购物车减少
+     */
+    jian() {
+
     }
   }
 }

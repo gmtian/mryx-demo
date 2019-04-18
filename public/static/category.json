@@ -33,9 +33,8 @@
     {"id":"4", "price":"9.9","desc":"因果肉饱满被叫做东方黑珍珠","title":"夏黑葡萄1盒500g",
       "thumb":"https://fms-image.missfresh.cn/ed78dbbfe95245a7abfbba805165f01e.jpg?iopcmd=convert&dst=webp",
       "origin":"19.9"},
-    {"id":"5", "tag":"限时秒杀","price":"16.9","desc":"大颗香甜 微微一笑为红颜","title":"红颜草莓1盒250g",
-      "thumb":"https://image.missfresh.cn/0be05adbf6fe49939f4ae87ccc833a55.gif?iopcmd=convert&dst=webp",
-      "origin":"21.9"},
+    {"id":"5","price":"9.9","desc":"将生活给的酸榨成柠檬汽水甜","title":"迷你青柠檬1盒250g",
+      "thumb":"https://fms-image.missfresh.cn/fef1ef4fed8045f5a6fe33b3b5458b90.jpg?iopcmd=convert&dst=webp"},
     {"id":"6", "tag":"限时特惠","price":"43.9","desc":"肉嘟嘟的女孩一样清甜","title":"小果 美早樱桃1盒250g",
       "thumb":"https://image.missfresh.cn/2be6fedbb4c64293ad71ab75062b3035.jpg?iopcmd=convert&dst=webp",
       "origin":"59.9"}
