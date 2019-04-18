@@ -55,9 +55,9 @@ export default {
 
     onScroll () {
       let scrollTop = document.documentElement.scrollTop
-      if(scrollTop >= 40){
+      if (scrollTop >= 40) {
         this.isFixedTab = true
-      }else{
+      } else {
         this.isFixedTab = false
       }
     }
@@ -68,6 +68,7 @@ export default {
   },
 
   activated () {
+    console.log(1111)
     window.addEventListener('scroll', this.onScroll)
   },
 

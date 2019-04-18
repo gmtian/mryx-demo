@@ -8,14 +8,6 @@
         <img :src="item.image" alt>
         <em>{{ item.name }}</em>
       </div>
-      <!-- <div class="recommend-text">
-        <img src="../images/home/04-axjc.png" alt>
-        <em>安心检测</em>
-      </div>
-      <div class="recommend-text">
-        <img src="../images/home/05-pfbz.png" alt>
-        <em>赔付保障</em>
-      </div>-->
     </div>
     <!-- 本周新品 -->
     <div class="category-wrap">
@@ -114,10 +106,9 @@ export default {
           this.cardList = data.product_list.categoryAreaV2.tileArea
           // this.productList = this.productList.concat(data.product_list.products)
           this.productList = data.product_list.products.map(item => {
-            return Object.assign({}, item, {flag: true, num: 1})
+            return Object.assign({}, item, { flag: true, num: 1 })
           })
           this.dividerBanner = data.product_list.divider_banner
-
         } else {
           alert(data.station_code)
         }
@@ -134,7 +125,6 @@ export default {
     },
 
     fn2 (item, index) {
-      // this.$set(this.productList, index, Object.assign({}, item, { flag: true }));
       item.flag = true
     }
   },

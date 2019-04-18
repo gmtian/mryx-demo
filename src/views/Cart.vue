@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-cart">
     <van-card
       :price="price"
       :title="tilte"
@@ -19,58 +19,60 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       price: 0,
       originprice: 10,
       num: 2,
       totalPrice: 0,
       checked: true,
-      tilte: "思念上海大馅馄饨150g",
-      imageURL: "https://image.missfresh.cn/117257e280dc48cf8550f51cc5992fa2.jpeg?iopcmd=convert&dst=webp"
-    };
+      tilte: '思念上海大馅馄饨150g',
+      imageURL: 'https://image.missfresh.cn/117257e280dc48cf8550f51cc5992fa2.jpeg?iopcmd=convert&dst=webp'
+    }
   },
 
   methods: {
-    onSubmit() {
-      console.log(111);
+    onSubmit () {
+      console.log(111)
     },
 
-    deleteItem() {
-      console.log(222);
+    deleteItem () {
+      console.log(222)
     }
   }
-};
+}
 </script>
 
 <style lang="less">
-.van-card {
-  padding: 10px 15px;
-  .van-card__title{
-    font-size: 14px;
-  }
-  .van-card__bottom{
-    margin-top: 10px;
-  }
+.main-cart {
+  .van-card {
+    padding: 10px 15px;
+    .van-card__title{
+      font-size: 14px;
+    }
+    .van-card__bottom{
+      margin-top: 10px;
+    }
 
-  .van-card__footer{
-    position: fixed;
-    right: 10px;
-    top: 72px;
+    .van-card__footer{
+      position: fixed;
+      right: 10px;
+      top: 72px;
+    }
+  }
+  .van-submit-bar {
+    bottom: 50px;
+    border-top: 1px solid #e6e6e6;
+    .van-button--danger {
+      background-color: #ff4891;
+    }
+    .van-submit-bar__price {
+      color: #ff4891;
+    }
+    .van-checkbox {
+      margin-left: 12px;
+    }
   }
 }
-.van-submit-bar {
-  bottom: 50px;
-  border-top: 1px solid #e6e6e6;
-  .van-button--danger {
-    background-color: #ff4891;
-  }
-  .van-submit-bar__price {
-    color: #ff4891;
-  }
-  .van-checkbox {
-    margin-left: 12px;
-  }
-}
+
 </style>
-
