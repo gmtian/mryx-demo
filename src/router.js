@@ -29,6 +29,10 @@ export default new VueRouter({
     { path: '/city', component: () => import('./views/City.vue') },
     { path: '/login', component: () => import('./views/Login.vue') },
     { path: '/home/:id', name: 'detail', component: () => import('./views/Detail.vue') },
+    { path: '/yue', component: () => import('./views/Yue.vue') },
+    { path: '/hongbao', component: () => import('./views/Hongbao.vue') },
+    { path: '/shangpin', component: () => import('./views/Shangpin.vue') },
+    { path: '/jifen', component: () => import('./views/Jifen.vue') },
     { path: '*', redirect: '/home/selling' }
   ]
 })

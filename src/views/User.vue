@@ -1,17 +1,17 @@
 <template>
   <div class="main-user">
     <div class="use-nologin">
-      <span>用户登录</span>
+      <router-link tag="span" to="/login">用户登录</router-link>
     </div>
     <div class="user-items">
       <ul>
-        <li>
+        <router-link tag="li" to="/yue">
           <span>
             <i>0</i>
           </span>
           <span>余额</span>
-        </li>
-        <li>
+        </router-link>
+        <router-link tag="li" to="/hongbao">
           <span>
             <i>0</i>
           </span>
@@ -21,19 +21,19 @@
               <img src="https://j-image.missfresh.cn/img_20180205201631182.gif">
             </i>
           </span>
-        </li>
-        <li>
+        </router-link>
+        <router-link tag="li" to="/shangpin">
           <span>
             <i>0</i>
           </span>
           <span>商品券</span>
-        </li>
-        <li>
+        </router-link>
+        <router-link tag="li" to="/jifen">
           <span>
             <i></i>
           </span>
           <span>积分兑换</span>
-        </li>
+        </router-link>
       </ul>
     </div>
     <div class="user-plus">
@@ -133,16 +133,18 @@
   }
   .user-items {
     width: 375px;
-    height: 70px;
+    // height: 70px;
     padding: 12px 0;
     ul {
       display: flex;
       width: 375px;
-      height: 45px;
+      // height: 45px;
       color: #000;
       padding: 10px 0;
 
       li {
+        display: flex;
+        flex-direction: column;
         flex: 1;
         text-align: center;
         color: #4d4d4d;
