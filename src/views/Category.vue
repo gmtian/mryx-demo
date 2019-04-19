@@ -24,7 +24,7 @@
           :origin-price="item.origin"
         >
           <div slot="footer" >
-            <van-button size="mini" v-if="item.flag" @click="fn1(item)" @minus="jian(item)">
+            <van-button size="mini" v-if="item.flag" @click="fn1(item)" @minus="jian(item)" >
               <img src="//static-as.missfresh.cn/frontend/item/static/img/new-cart.a16f026.png" >
             </van-button>
             <van-stepper v-model="item.num" @overlimit="fn2(item)" @plus="add(item)" v-else/>
