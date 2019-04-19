@@ -1,8 +1,9 @@
 <template>
   <div>
     <transition
-    enter-active-class="animated bounceIn"
-    leave-active-class="animated bounceOut">
+    enter-active-class="animated fadeInUp"
+    leave-active-class="animated fadeOutDown"
+    mode="out-in">
       <keep-alive>
         <router-view></router-view>
       </keep-alive>

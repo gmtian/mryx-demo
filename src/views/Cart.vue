@@ -45,7 +45,7 @@ export default {
 
 <style lang="less">
 .main-cart {
-  min-height: 570px;
+  min-height: 667px;
   background-color: #fff;
   .van-card {
     padding: 10px 15px;
@@ -63,6 +63,7 @@ export default {
     }
   }
   .van-submit-bar {
+    position: fixed;
     bottom: 50px;
     border-top: 1px solid #e6e6e6;
     .van-button--danger {
