@@ -1,12 +1,12 @@
 <template>
   <div id="login">
-    <form class="verify-phone">
+    <div class="verify-phone">
       <div class="form-box">
-        <input type="text" maxlength="11" placeholder="请输入账号" autofocus="autofocus">
+        <input type="text" maxlength="11" placeholder="请输入账号" v-model="username">
         <i class="form-clear"></i>
       </div>
       <div class="form-box">
-        <input type="password" maxlength="11" placeholder="输入密码" autofocus="autofocus">
+        <input type="password" maxlength="11" placeholder="输入密码" v-model="password">
         <i class="form-clear"></i>
       </div>
       <div class="form-protocol">
@@ -19,16 +19,29 @@
         </div>
       </div>
       <div class="form-submit">
-        <button class="form-submit-btn" type="submit">登录</button>
+        <button class="form-submit-btn" @click="submit">登录</button>
       </div>
-    </form>
+    </div>
     <h2 class="login-tip">为方便您及时查询订单信息，需要验证您的手机号来登录</h2>
   </div>
 </template>
 
 <script>
 export default {
+  data () {
+    return {
+      username: '',
+      password: ''
+    }
+  },
 
+  methods: {
+    submit () {
+      window.isLogin = true
+      var redirect = this.$route.query.redirect || '/'
+      this.$router.replace(redirect)
+    }
+  }
 }
 </script>
 

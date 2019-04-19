@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+window.isLogin = false
+
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -29,10 +31,70 @@ export default new VueRouter({
     { path: '/city', component: () => import('./views/City.vue') },
     { path: '/login', component: () => import('./views/Login.vue') },
     { path: '/home/:id', name: 'detail', component: () => import('./views/Detail.vue') },
-    { path: '/yue', component: () => import('./views/Yue.vue') },
-    { path: '/hongbao', component: () => import('./views/Hongbao.vue') },
-    { path: '/shangpin', component: () => import('./views/Shangpin.vue') },
-    { path: '/jifen', component: () => import('./views/Jifen.vue') },
+    {
+      path: '/yue',
+      component: () => import('./views/Yue.vue'),
+      beforeEnter: (to, from, next) => {
+        if (!window.isLogin) {
+          next({
+            path: '/login',
+            query: {
+              redirect: to.fullPath
+            }
+          })
+        } else {
+          next()
+        }
+      }
+    },
+    {
+      path: '/hongbao',
+      component: () => import('./views/Hongbao.vue'),
+      beforeEnter: (to, from, next) => {
+        if (!window.isLogin) {
+          next({
+            path: '/login',
+            query: {
+              redirect: to.fullPath
+            }
+          })
+        } else {
+          next()
+        }
+      }
+    },
+    {
+      path: '/shangpin',
+      component: () => import('./views/Shangpin.vue'),
+      beforeEnter: (to, from, next) => {
+        if (!window.isLogin) {
+          next({
+            path: '/login',
+            query: {
+              redirect: to.fullPath
+            }
+          })
+        } else {
+          next()
+        }
+      }
+    },
+    {
+      path: '/jifen',
+      component: () => import('./views/Jifen.vue'),
+      beforeEnter: (to, from, next) => {
+        if (!window.isLogin) {
+          next({
+            path: '/login',
+            query: {
+              redirect: to.fullPath
+            }
+          })
+        } else {
+          next()
+        }
+      }
+    },
     { path: '*', redirect: '/home/selling' }
   ]
 })

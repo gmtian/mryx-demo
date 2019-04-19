@@ -74,7 +74,7 @@ export default {
 
     fn1 (py) {
       var el = document.getElementById(py)
-      var box = document.getElementById("lv-indexlist__content")
+      var box = document.getElementById('lv-indexlist__content')
       box.scrollTop = el.offsetTop
     }
   },

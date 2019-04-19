@@ -45,6 +45,8 @@ export default {
 
 <style lang="less">
 .main-cart {
+  min-height: 570px;
+  background-color: #fff;
   .van-card {
     padding: 10px 15px;
     .van-card__title{

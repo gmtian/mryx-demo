@@ -196,7 +196,7 @@
         color: #969696;
         font-size: 12px;
         overflow: auto;
-        padding-top: 7px;
+        margin-top: 7px;
         .pink {
           color: #ff4891;
         }
@@ -208,9 +208,9 @@
     white-space: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
-    padding: 15px;
+    padding-left: 15px;
+    padding: 15px 0;
     ul {
-      width: 345px;
       height: 54px;
     }
     li {
@@ -237,8 +237,16 @@
     }
   }
   .activities-wrap {
-    padding-left: 10px;
-    padding-bottom: -10px;
+    position: relative;
+    .van-swipe {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      img {
+        width: 375px;
+        border-radius: 20px;
+      }
+    }
   }
   .list {
     min-height: 370px;

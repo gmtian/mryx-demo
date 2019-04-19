@@ -1,8 +1,12 @@
 <template>
   <div>
-    <keep-alive>
-      <router-view></router-view>
-    </keep-alive>
+    <transition
+    enter-active-class="animated bounceIn"
+    leave-active-class="animated bounceOut">
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
+    </transition>
 
     <Tabbar></Tabbar>
   </div>
