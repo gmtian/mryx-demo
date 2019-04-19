@@ -16,7 +16,7 @@ const getters = {
       total += price * num
       // console.log(num)
     })
-    return total * 1000
+    return total * 100
   },
 
   catNum (state) {
