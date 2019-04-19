@@ -18,9 +18,11 @@
         </div>
         <div class="category-nav-btn"></div>
       </div>
-
-      <router-view></router-view>
-
+      <transition
+        enter-active-class="animated fadeInLeft"
+        leave-active-class="animated fadeOutRight">
+        <router-view></router-view>
+      </transition>
     </div>
   </div>
 </template>
