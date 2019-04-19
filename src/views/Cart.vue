@@ -1,36 +1,40 @@
 <template>
   <div class="main-cart">
-    <van-card
-      :price="price"
-      :title="tilte"
-      :thumb="imageURL"
-      :origin-price="originprice"
-    >
-      <div slot="footer">
-        <van-stepper v-model="num" @overlimit="deleteItem"/>
-      </div>
-    </van-card>
+    <ul>
+      <li v-for="cat in catList"
+          :key="cat.stock">
+        <van-card
+          :price="cat.vip_price_pro.price_down.price / 100"
+          :title="cat.name"
+          :thumb="cat.image"
+
+        >
+          <div slot="footer">
+            <van-stepper v-model="cat.num" @overlimit="deleteItem"/>
+          </div>
+        </van-card>
+      </li>
+    </ul>
+
 
     <van-submit-bar :price="totalPrice" button-text="去结算" @submit="onSubmit">
-      <van-checkbox v-model="checked" checked-color="#ff4891">全选</van-checkbox>
+      <!-- <van-checkbox v-model="checked" checked-color="#ff4891">全选</van-checkbox> -->
     </van-submit-bar>
   </div>
 </template>
 
 <script>
+import { mapState, mapGetters } from 'vuex'
 export default {
-  data () {
-    return {
-      price: 0,
-      originprice: 10,
-      num: 2,
-      totalPrice: 0,
-      checked: true,
-      tilte: '思念上海大馅馄饨150g',
-      imageURL: 'https://image.missfresh.cn/117257e280dc48cf8550f51cc5992fa2.jpeg?iopcmd=convert&dst=webp'
-    }
-  },
+  computed: {
+    ...mapState('cat', [
+      'catList'
+    ]),
 
+    ...mapGetters('cat', [
+      'totalPrice'
+    ])
+  },
   methods: {
     onSubmit () {
       console.log(111)
@@ -57,7 +61,7 @@ export default {
     }
 
     .van-card__footer{
-      position: fixed;
+      // position: fixed;
       right: 10px;
       top: 72px;
     }

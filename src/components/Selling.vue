@@ -46,7 +46,7 @@
             </router-link>
             <div class="item-cart">
               <img :src="item.cart_image" v-if="item.flag" @click="fn1(item)" alt>
-              <van-stepper v-model="item.num" @overlimit="fn2(item, index)" v-else />
+              <van-stepper v-model="item.num" @plus="addCat(item)" @minus="reduceCat(item)" @overlimit="fn2(item, index)" v-else />
             </div>
           </div>
         </div>
@@ -60,6 +60,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 import Banner from '../components/Banner'
 import axios from 'axios'
 
@@ -90,6 +91,10 @@ export default {
   },
 
   methods: {
+    ...mapMutations('cat', [
+      'addCat',
+      'reduceCat'
+    ]),
     getList () {
       axios.get('/static/data.json', {
         params: {
@@ -122,10 +127,12 @@ export default {
 
     fn1 (item) {
       item.flag = false
+      this.addCat(item)
     },
 
     fn2 (item, index) {
       item.flag = true
+      this.reduceCat(item)
     }
   },
 
