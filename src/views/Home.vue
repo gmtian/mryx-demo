@@ -71,7 +71,6 @@ export default {
   },
 
   activated () {
-    console.log(1111)
     window.addEventListener('scroll', this.onScroll)
   },
 
