@@ -30,18 +30,18 @@
       </div>
       <div class="product-list">
         <div class="product-item" v-for="(item, index) in productList" :key="index">
-          <router-link :to="{ name: 'detail',params: {id: item.stock }}">
+          <router-link :to="{ name: 'detail',params: {id: index }}">
             <img :src="item.image" alt>
           </router-link>
           <div class="item-detail">
-            <router-link :to="{ name: 'detail',params: {id: item.stock }}" class="item-title">
+            <router-link :to="{ name: 'detail',params: {id: index }}" class="item-title">
               <p class="sub-title">{{ item.name }}</p>
               <p class="mess-title">{{ item.subtitle }}</p>
             </router-link>
-            <router-link :to="{ name: 'detail',params: {id: item.stock }}" class="item-tag">
+            <router-link :to="{ name: 'detail',params: {id: index }}" class="item-tag">
               <span>{{ item.product_tags }}</span>
             </router-link>
-            <router-link :to="{ name: 'detail',params: {id: item.stock }}" class="item-price">
+            <router-link :to="{ name: 'detail',params: {id: index }}" class="item-price">
               <span class="price">￥ {{ item.vip_price_pro.price_down.price / 100 }}</span>
             </router-link>
             <div class="item-cart">

@@ -18,7 +18,7 @@ export default new VueRouter({
           children: [
             { path: 'selling', component: () => import('./components/Selling.vue') },
             { path: 'specials', component: () => import('./components/Specials.vue') },
-            { path: '', redirect: '/selling' },
+            { path: '', redirect: '/selling' }
 
           ]
         },
