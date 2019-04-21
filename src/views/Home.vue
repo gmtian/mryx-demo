@@ -2,7 +2,7 @@
   <div>
     <Header></Header>
 
-    <div id="body">
+    <div class="body">
       <!-- 导航栏 -->
       <div class="category-nav-wrap" :class="{fixed: isFixedTab}">
         <div class="category-nav">
@@ -82,14 +82,14 @@ export default {
 
 <style lang="less">
 @import "../styles/common/reset.less";
-
-#body {
+.body {
   width: 100%;
   position: relative;
   overflow-y: auto;
   margin-top: 40px;
   margin-bottom: 50px;
   .category-nav-wrap {
+    display: flex;
     position: absolute;
     width: 100%;
     height: 43px;
@@ -103,7 +103,7 @@ export default {
     }
 
     .category-nav {
-      width: 90%;
+      flex: 1;
       height: 100%;
       line-height: 43px;
       display: flex;
@@ -133,13 +133,9 @@ export default {
     .category-nav-btn {
       width: 42px;
       height: 42px;
-      position: absolute;
-      right: 0;
-      top: 0;
       background-color: #fff;
       background: #fff url(../images/home/dropdown.png) no-repeat center;
       background-size: 14px;
-      z-index: 15;
       background-position-y: 50%;
     }
   }
