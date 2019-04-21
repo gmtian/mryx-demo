@@ -10,7 +10,7 @@
 
         >
           <div slot="footer">
-            <van-stepper v-model="cat.num" @overlimit="deleteItem"/>
+            <van-stepper v-model="cat.num" @overlimit="deleteItem(cat)"/>
           </div>
         </van-card>
       </li>
@@ -40,7 +40,8 @@ export default {
       console.log(111)
     },
 
-    deleteItem () {
+    deleteItem (cat) {
+      this.$store.commit("cat/reduceCat",cat)
       console.log(222)
     }
   }

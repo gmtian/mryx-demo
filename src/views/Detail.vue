@@ -1,6 +1,7 @@
 <template>
   <div class="product-detail">
     <div class="title-list">
+      <van-icon name="arrow-left"/>
       <div class="title-detail">商品详情</div>
       <a href="#">
         <img
@@ -37,14 +38,14 @@
         <div class="custom-indicator" slot="indicator">{{ current + 1 }}/4</div>
       </van-swipe>
     </div>
-    <dir class="product-describe">
+    <div class="product-describe">
       <van-panel title="供港品质 甜脆出口11国" desc="供港烟台苹果4个760g起">
         <div class="product-describe-bottom">
           <div class="jiage">￥15.9</div>
           <div class="yishou">已售44536份</div>
         </div>
       </van-panel>
-    </dir>
+    </div>
     <div class="product-attrs">
       <span>· 产地烟台</span>
       <span>· 次日达</span>
@@ -61,26 +62,12 @@
       </div>
     </div>
     <div class="foot">
-     <van-goods-action>
-  <van-goods-action-mini-btn
-    icon="chat-o"
-    text="客服"
-  />
-  <van-goods-action-mini-btn
-    icon="cart-o"
-    text="购物车"
-
-  />
-  <van-goods-action-big-btn
-    text="加入购物车"
-
-  />
-  <van-goods-action-big-btn
-    primary
-    text="立即购买"
-
-  />
-</van-goods-action>
+      <van-goods-action>
+        <van-goods-action-mini-btn icon="chat-o" text="客服"/>
+        <van-goods-action-mini-btn icon="cart-o" text="购物车"/>
+        <van-goods-action-big-btn text="加入购物车"/>
+        <van-goods-action-big-btn primary text="立即购买"/>
+      </van-goods-action>
     </div>
   </div>
 </template>
@@ -112,12 +99,19 @@ export default {
   left: 0;
   bottom: 0;
   .title-list {
+    position: relative;
     text-align: center;
     width: 100%;
     height: 44px;
     line-height: 44px;
     font-size: 16px;
     margin: 0 auto;
+    .van-icon {
+      position: absolute;
+      top: 16px;
+      left: 12px;
+      font-size: 20px;
+    }
     .title-detail {
       height: 100%;
       line-height: 44px;
@@ -138,13 +132,42 @@ export default {
       }
     }
   }
+  .swipe {
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .product-describe {
+    padding-left: 2px;
+    padding-top: 20px;
+    span {
+      font-size: 18px;
+      color: #474245;
+      font-weight: 700;
+    }
+    .van-cell__label {
+      font-size: 16px;
+      color: #474245;
+    }
+    .product-describe-bottom {
+      padding-top: 15px;
+      .jiage {
+        float: left;
+        padding-left: 20px;
+        color: #ff4891;
+        font-weight: 900;
+      }
+      .yishou {
+        float: right;
+        padding-right: 15px;
+        color: #969696;
+      }
+    }
+  }
 }
 
-img {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
 .custom-indicator {
   position: absolute;
   top: 220px;
@@ -152,33 +175,7 @@ img {
   font-size: 16px;
   color: #ccc;
 }
-.product-describe {
-  padding-left: 2px;
-  padding-top: 20px;
-  span {
-    font-size: 18px;
-    color: #474245;
-    font-weight: 700;
-  }
-  .van-cell__label {
-    font-size: 16px;
-    color: #474245;
-  }
-  .product-describe-bottom {
-    padding-top: 15px;
-    .jiage {
-      float: left;
-      padding-left: 20px;
-      color: #ff4891;
-      font-weight: 900;
-    }
-    .yishou {
-      float: right;
-      padding-right: 15px;
-      color: #969696;
-    }
-  }
-}
+
 .product-attrs {
   padding-top: 45px;
   span {
@@ -222,5 +219,4 @@ img {
     }
   }
 }
-
 </style>

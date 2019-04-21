@@ -45,6 +45,7 @@ const mutations = {
   },
 
   reduceCat (state, product) {
+    console.log(product, 8888)
     // 判断点击的商品是否已经存在购物车中，
     let index = state.catList.findIndex(item => {
       return item.stock === product.stock
